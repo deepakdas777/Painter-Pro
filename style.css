@@ -1,0 +1,94 @@
+ 
+
+   #paint {
+             cursor: pointer;
+      }
+      #paint:active {
+             cursor: crosshair;
+      }
+      .menu{display:block;width:40px;height:40px;border-radius:25px;background:#000 }
+      .menu1{display:block;width:35px;height:35px;border-radius:25px;background:#000}
+      .menu2{display:block;width:28px;height:28px;border-radius:25px;background:#000}
+      form {
+  	   width: 10em;
+           height:29.5em;
+  	   padding: 1em;
+  	   margin: 0 auto;
+           text-align: center;
+           
+	   background-color: #2f2f2f;
+           color: white
+ 	   border: solid gray 2px;
+	}
+	.pencil {
+  	     background-color: white;
+	     color: black;
+	     cursor: pointer;
+	}
+	.paint {
+  	     background-color: white;
+	     color: black;
+	}
+        .rectangle {
+  	     background-color: white;
+	     color: black;
+	}
+	.circle {
+  	     background-color: white;
+	     color: black;
+	}
+        .violet {
+  	     background-color: violet;
+	     color: white;
+	}
+ 	.indigo {
+  	     background-color: indigo;
+	     color: white;
+	}
+        .blue {
+             background-color: blue;
+             color: white;
+        }
+	.green {
+  	     background-color: green;
+	     color: white;
+	}
+	.yellow {
+  	     background-color: yellow;
+	     color: white;
+	}
+	.black {
+  	     background-color: black;
+	     color: white;
+	}
+	.orange {
+  	     background-color: orange;
+	     color: white;
+	}
+	.red {
+  	     background-color: red;
+	     color: white;
+	}
+	.white {
+ 	     background-color: white;
+	     color: black;
+	}
+	.brown {
+             background-color: brown;
+             color: white;
+        }
+        .clear {
+             background-color: white;
+             color: black;
+        }
+	
+	.red, .white, .blue,.violet,.indigo,.green,.yellow,.brown,.clear,.pencil,.rectangle,.orange        {
+  		width: 5.2em;
+    		font-weight: bold;
+	}
+#container { position: relative; }
+      #paint { border: 5px solid silver;
+               background:white }
+#fillcolor {
+
+}

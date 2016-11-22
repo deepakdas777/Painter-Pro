@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<body background="images/bg.jpg">
+<h1><h1 style="text-align:center;"><font face="comic sans ms" color="red"><i><b>PAINTER PRO</i></b></h1>
+<html lang="en">
+<link rel="icon" href="icon.png" type="image/x-icon" id="favicon">
+<head><link rel="stylesheet" href="style.css"></head>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Paint </title>
+    
+  </head>
+  <body>
+  <table>
+  <tr>
+  <td>
+       <div id="container">
+      <canvas id="paint" width="800" height="500" ></canvas>
+    </div>
+  </td>
+
+
+
+ <script src="paint.js"></script>
+ 
+ 
+  </body>
+<td>
+
+        
+    </div>
+<div id="colors">
+</div>
+<form  method=post>
+<div>
+<p><u><b>Choose Tool</b></u></p>
+<div id="pencil" onclick="pencil()">
+            <img src="images/pencil.png" width="30" height="30" />
+	
+        </div>
+<div id="eraser" onclick="eraser()">
+            <img src="images/eraser.png" width="30" height="30" />
+        </div>
+
+<div id="fill" onclick="fill()">
+            <img src="images/fill.png" width="30" height="30" />
+        </div>
+<button type="button" onclick="circle()"class=circle><i><b>circle</i></b></button>
+<button type="button" onclick="rectangle()"class=rectangle ><i><b>rectangle</i></b></button>
+<p><u><b><i>Choose Color</i></b></u></p>
+<button type="button" onclick="violet()"class=violet><i><b>violet</i></b></button>
+<button type="button" onclick="indigo()"class=indigo><i><b>indigo</i></b></button>
+<button type="button" onclick="blue()"class=blue><i><b>blue</i></b></button>
+<button type="button" onclick="green()"class=green><i><b>green</i></b></button>
+<button type="button" onclick="yellow()"class=yellow><i><b>yellow</i></b></button>
+<button type="button" onclick="orange()"class=orange><i><b>orange</i></b></button>
+<button type="button" onclick="red()"class=red><i><b>red</i></b></button>
+<button type="button" onclick="brown()"class=brown><i><b>brown</i></b></button>
+<button type="button" onclick="black()"class=black><i><b>black</i></b></button>
+
+</div>
+<div>
+<table>
+<p><u><i><b>Choose Size</i></b></u></p>
+<tr>
+<td>
+<button type="button" onclick="size0()" class="menu"></button>
+</td>
+<td>
+<button type="button" onclick="size1()" class="menu1"></button>
+</td>
+<td>
+<button type="button" onclick="size2()" class="menu2"></button>
+</td>
+</tr>
+</table>
+<input type=button value="Clear" onClick="history.go()">
+</div>
+</form>
+</td>
+</tr>
+</table>
+
+</html>
+
