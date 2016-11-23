@@ -56,6 +56,7 @@ function black(){
 function pencil () {
     rectan=0;
     pen=1;
+   
     
     var tool = this;
     this.started = false;
@@ -136,6 +137,7 @@ function rectangle() {
   //color = 'black';//
   rectan=1;
   pen=0;
+ 
   canvas.addEventListener('mousedown', mouseDownrect, false);
   canvas.addEventListener('mouseup', mouseUprect, false);
   canvas.addEventListener('mousemove', mouseMoverect, false);
@@ -157,23 +159,75 @@ function circle(){
 
       context.beginPath();
       context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-      
-      context.fill();
       context.lineWidth = 5;
-      context.fillStyle=color;
-      context.strokeStyle=color;
+      context.fillStyle="red";
+      context.fill();
       context.stroke();
 }
-function line(){
-				var a0x=0;
-				var a0y=0;
-				ctx0.beginPath();
-				ctx0.strokeStyle="#333333";
-				ctx0.lineWidth=1;
-				ctx0.moveTo(a0x+302,a0y+32);
-				ctx0.lineTo(a0x+30,a0y+40);
-				ctx0.lineTo(a0x+30,a0y+40);
-				ctx0.quadraticCurveTo(a0x+10,a0y+14,a0x+12,a0y+50);
-				ctx0.bezierCurveTo(a0x+10,a0y+14,a0x+12,a0y+50,a0x+43,a0y+52);
-				ctx0.stroke();
+
+function smile() {
+   // Draw the face
+context.fillStyle = "yellow";
+context.beginPath();
+context.arc(95, 85, 40, 0, 2*Math.PI);
+context.closePath();
+context.fill();
+context.lineWidth = 2;
+context.stroke();
+context.fillStyle = "black";
+
+// Draw the left eye
+context.beginPath();
+context.arc(75, 75, 5, 0, 2*Math.PI);
+context.closePath();
+context.fill();
+
+// Draw the right eye
+context.beginPath();
+context.arc(114, 75, 5, 0, 2*Math.PI);
+context.closePath();
+context.fill();
+
+// Draw the mouth
+context.beginPath();
+context.arc(95, 90, 26, Math.PI, 2*Math.PI, true);
+context.closePath();
+context.fill();
+  
 }
+var get_file_width = function()
+{
+        var file_width = document.getElementById("filewidth").value;
+        return file_width;
+}
+
+var get_file_height = function()
+{
+        var file_height = document.getElementById("fileheight").value;
+        return file_height;
+}
+
+var print_file_image = function(e)
+{
+        clear_canvas();
+        var temp = URL.createObjectURL(e.target.files[0]);
+        var image = new Image();
+        image.src = temp;
+        image.addEventListener("load", function()
+        {
+                var width = get_file_width();
+                var height = get_file_height();
+                context.drawImage(image, 0, 0, width, height);
+        });
+        return;
+}
+
+var save_image = function()
+{
+        var data = canvas.toDataURL();
+        window.open(data, '_blank', 'location=0, menubar=0');
+}
+ 
+
+
+
